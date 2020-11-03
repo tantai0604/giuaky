@@ -4,7 +4,7 @@ const datad = document.querySelector('#data-template').innerHTML
 let jSONData = []
 axios({
     method: 'get',
-    url: 'http://localhost:3000/sinhvien'
+    url: 'http://54.169.150.16:3000/sinhvien'
 })
     .then((result) => {
         console.log(result.data)
@@ -22,7 +22,7 @@ axios({
 const addSP = document.getElementById('them').addEventListener('click', (e) => {
     axios({
         method: 'post',
-        url: 'http://localhost:3000/sinhvien',
+        url: 'http://54.169.150.16:3000/sinhvien',
         data: {
             masp: document.getElementById('masp').value,
             tensp: document.getElementById('tensp').value,
