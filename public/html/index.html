@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>ABC</title>
+</head>
+
+<body>
+    <div class="main-content">
+        <h3>Nhập Sản Phẩm</h3>
+
+        <form>
+            <table>
+                <tr>
+                    <td> <label for="">Mã SP: </label> </td>
+                    <td> <input type="text" id="masp" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="">Tên SP: </label> </td>
+                    <td> <input type="text" id="tensp" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="">Số lượng: </label> </td>
+                    <td> <input type="text" id="sl" required></td>
+                </tr>
+            </table>
+
+            <button id="them">Lưu</button>
+            <button id="xoa">Xóa trống</button>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mã sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng</th>
+                </tr>
+            </thead>
+            <tbody id="sinhvienjs">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script id="data-template" type="text/html">
+        <tr>
+            <td>{{masp}}</td>
+            <td>{{tensp}}</td>
+            <td>{{sl}}</td>
+            
+        </tr>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
